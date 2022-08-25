@@ -1,0 +1,58 @@
+.Banner{
+    margin-top: 80px;
+    padding: 50px 100px;
+    text-align: center;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Banner__heading{
+    font-size: 80px;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+.Banner__Img{
+    margin: 20px 0;
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(to  right, #9BB8E9, #F9C2D6);
+    border-radius: 50px;
+}
+.Banner__description{
+    letter-spacing: .5px;
+}
+.Banner_buttons{
+    display: flex;
+    margin: 20px;
+}
+.Banner_buttons > button{
+    padding: 15px 30px;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    /* background-color: whitesmoke; */
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #9BB8E9, #F9C2D6);
+}
+.Banner_buttons>button:hover{
+    transform: scale(1.1);
+}
+@media only screen and (max-width: 600px){
+    .Banner {
+            margin-top: 80px;
+            padding: 50px 20px;
+    }
+    .Banner__heading {
+            font-size: 60px;
+    }
+    .Banner__Img {
+        margin: 20px 0;
+        height: 200px;
+        width: 100%;
+        background-color: lightskyblue;
+        border-radius: 20px;
+    }
+}

@@ -1,0 +1,122 @@
+.Service{
+    width: 100%;
+    padding: 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.Service__box{
+    padding: 30px;
+    cursor: pointer;
+    position: relative;
+    min-width: 300px;
+    width: 40%;
+    aspect-ratio: 1/1;
+    flex-grow: 1;
+    border-radius: 50px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.box1{
+    pointer-events: none;
+    font-weight: 900;
+    font-size: 70px;
+    color: whitesmoke;
+    text-align: center;
+}
+.Service__box.box2.open{
+    border-radius: 5px;
+    transform: scaleX(2)translateX(-26%);
+    z-index: 99;
+    box-shadow: 0 0 50px #000;
+}
+.Service__box.box2.move {
+    transform:translateX(-104%);
+    z-index: 99;
+}
+.Service__box.box4.move {
+    transform:translateY(-104%);
+    z-index: 99;
+}
+.Service__box.box3.move {
+    transform:translateY(-104%);
+    z-index: 99;
+}
+.Service__box.box3.open{
+    border-radius: 5px;
+    transform: scaleX(2)translateX(26%);
+    z-index: 99;
+    box-shadow: 0 0 50px #000;
+}
+.Service__box.box4.open{
+    border-radius: 5px;
+    transform: scaleX(2)translateX(-26%);
+    z-index: 99;
+    box-shadow: 0 0 50px #000;
+}
+.box2{
+    background-color: #F9C2D6;
+}
+.box3{
+    background-color: #CCADEF;
+}
+.box4{
+    background-color: #9BB8E9;
+}
+
+
+/* Inside Service Box */
+.Service__box__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.Service__box__img > img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+.Service__box__text{
+    font-size: 0;
+    overflow: hidden;
+    height: 90%;
+    min-width: 0%;
+    background-color: #9BB8E9;
+    border-radius: 50px;
+}
+.Service__box__img.open{
+    height: 90%;
+    margin: 10px;
+    min-width: 50%;
+    max-width: 50%;
+    background-color: #9BB8E9;
+    border-radius: 2px;
+}
+.Service__box__text.open{
+    font-family: Arial, Helvetica, sans-serif;
+    font-stretch: condensed;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    margin: 10px;
+    height: 90%;
+    min-width: 50%;
+    max-width: 50%;
+    background-color: #9BB8E9;
+    border-radius: 2px;
+}
+
+
+
+@media only screen and (max-width: 600px){
+    .Service__box{
+        pointer-events: none;
+    }
+}

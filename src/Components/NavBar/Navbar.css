@@ -1,0 +1,31 @@
+@media only screen and (max-width: 600px){
+    .Navbar{
+        top: 0;
+        left: 0;
+        right: 0;bottom: 100%;
+        width: 100%;
+        position: fixed;
+        height: auto;
+        background-color: #000;
+        padding: 0;
+        z-index:999;
+        overflow: hidden;
+        transition: .2s;
+    }
+    .Navbar.open{
+        bottom: 0%;
+        padding: 20px;
+    }
+    .Navbar__closeBtn{
+        font-size: 30px;
+        margin-left: 90%;
+        width: 100%;
+    }
+    .Navbar__Link{
+        width: 100%;
+        margin: 15px 0;
+        background-color: #9BB8E9;
+        padding: 35px 0;
+        border-radius: 10px;
+    }
+}

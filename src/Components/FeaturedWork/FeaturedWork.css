@@ -1,0 +1,54 @@
+.FeaturedWork{
+    padding: 50px 100px;
+}
+.FeaturedWork__heading{
+    font-size: 70px;
+    color: whitesmoke;
+    text-align: center;
+}
+.FeaturedWork__container{
+    width: 100%;
+}
+.FeaturedWork__container__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.FeaturedWork__box{
+    border-radius: 50px;
+    margin: 10px;
+    aspect-ratio: 1/1;
+    flex-grow: 1;
+    width: 40%;
+}
+.FeaturedWork__box.right{
+    min-width: 300px;
+    background-color: #9BB8E9;
+}
+.FeaturedWork__box.left{
+    min-width: 300px;
+}
+.FeaturedWork__box.innerLeft{
+    background-color: #F9C2D6;
+}
+.FeaturedWork__box.innerRight{
+    background-color: #9BB8E9;
+}
+.FeaturedWork__box.bottom{
+ aspect-ratio: 2/1;
+ background-color: #CCADEF;
+}
+
+
+@media only screen and (max-width: 600px){
+    .FeaturedWork {
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .FeaturedWork__box.innerLeft,.FeaturedWork__box.innerRight,.FeaturedWork__box.bottom{
+        border-radius: 30px;
+    }
+}
