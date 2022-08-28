@@ -1,7 +1,18 @@
-import React, { useState }  from 'react'
+import React, { useEffect, useState }  from 'react'
+import { useInView } from 'react-intersection-observer'
 import './Service.css'
+import {motion} from 'framer-motion'
+
 
 const Service = () => {
+
+  const [ serviceContainer, inView] = useInView({
+    threshold:0.2,
+  })
+  const [animateDiv, setAnimateDiv] = useState({
+    opacity:0,
+    y:'150px'
+  })
 
   const [open1, setOpen1] = useState('')
   const [open2, setOpen2] = useState('')
@@ -51,37 +62,57 @@ const Service = () => {
     }
   }
 
+useEffect(() => {
+  if(inView){
+  setAnimateDiv({
+    opacity:1,
+    y:0,
+  })
+  }
+  
+}, [inView])
 
 
 
   return (
-    <div className='Service'>
+    <motion.div 
+    className='Service'
+    ref={serviceContainer}
+    animate={animateDiv}
+    >
         <div className={"Service__box box1"}>
             Service <br /> We <br /> Provide
         </div>
-        <div className={`Service__box box2 ${open1} ${move1}`}
-        onClick={ServiceBoxFunc1}
+
+        {/* BOX 1 */}
+        <motion.div
+          className={`Service__box box2 ${open1} ${move1}`}
+          onClick={ServiceBoxFunc1}
         >
           <div className={`Service__box__img ${open1}`}></div>
           <div className={`Service__box__text ${open1}`}>
           </div>
 
-        </div>
+        </motion.div>
 
-        <div className={`Service__box box3 ${open2} ${move2}`}
-            onClick={ServiceBoxFunc2}
+        {/* BOX 2 */}
+        <motion.div
+          className={`Service__box box3 ${open2} ${move2} `}
+          onClick={ServiceBoxFunc2}
         >
           <div className={`Service__box__img ${open2}`}></div>
           <div className={`Service__box__text ${open2}`}></div>
-        </div>
+        </motion.div>
 
-        <div className={`Service__box box4 ${open3} ${move3}`}
-            onClick={ServiceBoxFunc3}
+        {/* BOX 3 */}
+        <motion.div
+          className={`Service__box box4 ${open3} ${move3} `}
+          onClick={ServiceBoxFunc3}
         >
           <div className={`Service__box__img ${open3}`}></div>
           <div className={`Service__box__text ${open3}`}></div>
-        </div>
-    </div>
+        </motion.div>
+    </motion.div>
   )
 }
 

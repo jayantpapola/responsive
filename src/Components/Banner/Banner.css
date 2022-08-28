@@ -13,16 +13,24 @@
     font-weight: 900;
 }
 .Banner__Img{
+    transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) .1s;
     margin: 20px 0;
     height: 500px;
-    width: 100%;
+    width: 0%;
     background-image: linear-gradient(to  right, #9BB8E9, #F9C2D6);
     border-radius: 50px;
 }
 .Banner__description{
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(100px);
     letter-spacing: .5px;
 }
 .Banner_buttons{
+    opacity: 0;
+    transition: 1s;
+    transition-delay: .3s;
+    transform: translateY(100px);
     display: flex;
     margin: 20px;
 }

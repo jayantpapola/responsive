@@ -1,5 +1,7 @@
 .FeaturedWork{
+    max-width: 100%;
     padding: 50px 100px;
+    overflow: hidden;
 }
 .FeaturedWork__heading{
     font-size: 70px;
@@ -10,11 +12,13 @@
     width: 100%;
 }
 .FeaturedWork__container__row{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
 }
 
 .FeaturedWork__box{
+    position: relative;
     border-radius: 50px;
     margin: 10px;
     aspect-ratio: 1/1;
@@ -30,13 +34,26 @@
 }
 .FeaturedWork__box.innerLeft{
     background-color: #F9C2D6;
+    opacity: 0;
+    transition: .5s;
+    transform: translate(-150px,-150px)scale(1.5);
 }
 .FeaturedWork__box.innerRight{
     background-color: #9BB8E9;
+    opacity: 0;
+    transition: .8s;
+    transform: translate(150px, -150px)scale(1.5);
+    transition-delay: .1s;
+}
+.innerBottom{
+    opacity: 0;
+    transition: .8s;
+    transform: translateY(150px)scale(1.5);
+    transition-delay: .2s;
 }
 .FeaturedWork__box.bottom{
- aspect-ratio: 2/1;
- background-color: #CCADEF;
+    aspect-ratio: 2/1;
+    background-color: #CCADEF;
 }
 
 
